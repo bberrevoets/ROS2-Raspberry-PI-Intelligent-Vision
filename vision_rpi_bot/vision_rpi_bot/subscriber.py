@@ -6,7 +6,7 @@ from std_msgs.msg import Int16
 
 class MinimalSubscriber(Node):
     def __init__(self):
-        super().__init__("minimal_subscriber")  # type: ignore
+        super().__init__("minimal_rpi_subscriber")  # type: ignore
         self.subscription = self.create_subscription(
             Int16, "pub_topic", self.listener_callback, 10
         )
